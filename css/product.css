@@ -1,0 +1,101 @@
+
+
+
+.productImageAndText {
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+.product-info-section {
+    font-size: 0.8rem;
+    font-weight: 300;
+    margin-top: 3rem;
+    line-height: 0;
+    color: var(--color-primary);
+    font-weight: 400;
+}
+
+.product-info-section h2 {
+    text-align: left;
+}
+
+.productImageAndText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.color-price {
+    display: flex;
+    width: 100%;
+    margin-bottom: 1rem;
+    justify-content: space-between;
+}
+
+.color-price, .productpage {
+    font-family: var(--font-roboto);
+    font-size: 0.875rem;
+    color: var(--color-primary);
+    font-weight: 400;
+    line-height: 1rem;
+}
+
+.color-rainjacket {
+    color: grey;
+}
+
+.price-rainjacket {
+    font-size: 1rem;
+}
+
+.product-img-container2 {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.product-img-container2 img {
+    max-width: 100%;
+    height: auto; 
+}
+
+.productpage {
+    margin-bottom: 1rem;
+}
+
+.sizesDropdown {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 0.875rem;
+}
+
+.sizesDropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #F9F9F9;
+    text-align: center;
+    min-width: 6.25rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 0.5rem;
+    z-index: 1;
+}
+
+.sizesDropdown::after {
+    content: "\25BC";
+    font-size: 0.75rem;
+    margin-left: 0.313rem;
+    padding: 0.25rem;
+    border: 1px solid #cccccc;
+    border-radius: 0.188;
+}
+
+.sizesDropdown.active .sizesDropdown-content {
+    display: block;
+}
+
+.buttons button[type="buttonAddBasket"] {
+    margin-bottom: 3rem;
+}

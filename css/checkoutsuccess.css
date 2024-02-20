@@ -1,0 +1,21 @@
+
+/* THIS PAGE CONTAINS THE STYLING OF MAIN CONTENT ON "checkoutsuccess.html" */
+
+.checkIcon {
+    text-align: center;
+    font-size: 3rem;
+}
+
+.on-the-way {
+    display: block;
+    text-align: center;
+    font-family: var(--font-roboto);
+    font-size: 0.7rem;
+    color: var(--color-primary);
+    margin: 3rem;
+}
+
+.buttons button[type="buttonShopMore"] {
+    margin-bottom: 3rem;
+}
+

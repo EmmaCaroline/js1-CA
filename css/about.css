@@ -1,0 +1,54 @@
+
+/* THIS PAGE CONTAINS THE STYLING OF MAIN CONTENT ON "about.html" */
+
+/* Reused CSS from other stylesheets:
+.info-part     (found in: "jacketCategories.css")
+.info-desk     (found in: "jacketCategories.css")
+*/
+
+.logo-mountain {
+    display: flex;
+    justify-content: center;
+}
+
+.logo-mountain img {
+    max-width: 25%;
+    height: auto;
+}
+
+.about-us-info {
+    margin-left: 3rem;
+    margin-right: 3rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.about-bg-image {
+    background-image: url("../images/nature_backgrounds/trees_rain.jpg");
+    background-size: cover;
+    padding-bottom: 5rem;
+    padding-top: 5rem;
+    border-top: 0.12rem solid var(--bg-color);
+    border-bottom: 0.12rem solid var(--bg-color); 
+}
+
+.about-us-text {
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+.about-bold {
+    font-weight: 500;
+}
+
+.about-text1, .about-text2 {
+    margin-bottom: 3rem;
+}
+
+.about-readmore {
+    margin-left: 3rem;
+    margin-right: 3rem;
+    margin-bottom: 3rem;
+    font-weight: 300; 
+    text-align: center;
+}

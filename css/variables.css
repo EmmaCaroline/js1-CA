@@ -1,0 +1,13 @@
+
+/* TYPOGRAPHY AND BACKGROUND-COLOUR VARIABLES */
+
+:root {
+    --color-primary: #000000;
+    --color-secondary: #FFFFFF;
+    --bg-color: #0B2D26;
+    --btn-color: #0F6A7A;
+    --logo-color: #0A3641;
+  
+    --font-outfit: 'Outfit', Helvetica, sans-serif;
+    --font-roboto: 'Roboto', Arial, sans-serif;
+}

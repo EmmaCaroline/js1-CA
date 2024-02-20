@@ -1,0 +1,47 @@
+
+/* RESET CSS */
+
+*, *:before, *:after {
+    box-sizing: border-box;
+    box-sizing: inherit;
+    background-repeat: no-repeat;
+}
+  
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-secondary);
+}
+
+h1, h2, h3 {
+    font-family: var(--font-outfit);
+    letter-spacing: 0.05em;
+}
+
+h2, h3 {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+p {
+    font-family: var(--font-roboto);
+    font-weight: 400;
+    font-size: 0.875rem;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
