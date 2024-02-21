@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
     <script src="https://kit.fontawesome.com/7f993fe397.js" crossorigin="anonymous"></script>
+    <script type="module" src="./scripts/femaleJackets.mjs"></script>
 </head>
 <body>
     <header>
@@ -23,7 +24,6 @@
                 </a>
             </div>
             <span class="material-symbols-outlined">
-                <a href="index.html">search</a>
                 <a href="index.html">favorite</a>
                 <a href="checkout.html">shopping_basket</a>
             </span>
@@ -32,8 +32,8 @@
                 <span id="toggle-menu-label" class="visually-hidden">Toggle Menu</span>
                 <div class="hamburger"></div>
                 <ul class="menu">
-                    <li><a href="rainjackets.html" aria-label="Rainjackets">Rainjackets</a></li>
-                    <li><a href="softshell.html" aria-label="Softshell Jackets">Softshell Jackets</a></li>
+                    <li><a href="women.html" aria-label="Women">Women</a></li>
+                    <li><a href="men.html" aria-label="Men">Men</a></li>
                     <li><a href="sale.html" aria-label="Sale">Sale</a></li>
                 </ul>
             </nav>
@@ -42,97 +42,12 @@
             <p>Enrich your outdoor adventures with our high standard jackets</p>
         </div>
     </header>
-    <main>
+    <main class="page-main">
         <div class="info-part">
-            <p class="info-desk"><a href="index.html">Home</a> / Rainjackets</p> <!-- Hide on mobile-->
-            <h1>Rainjackets</h1>
+            <p class="info-desk"><a href="index.html">Home</a> / Women</p> <!-- Hide on mobile-->
+            <h1>Women's Jackets</h1>
         </div>
-        <div class="shop-container">
-            <div class="rainjacket-img"></div>
-            <p class="shop-text">Here you will find our collection of rainjackets, that is both practical and stylish. Our rainjackets is made with PVC-free waterproof material, keeping you dry and comfortable in any weather condition. Pushing the comfort zone - so that you may focus on what’s important - exploring new adventures! Jackets of high quality made sustainable.</p>
-        </div>
-        <!--
-        <div class="product-img-container">
-            <div class="product-img-wrapper">
-                <a href="product.html">
-                    <img src="images/product-images_ai/raincoats/yellowrain.jpg" alt="Yellow Woman's long raincoat with a hoodie, pockets, buttons, and a belt.">
-                </a>
-                <div class="textAndIcon">
-                    <div class="productText">
-                        <p class="productname">Classic Raincoat Women</p>
-                        <p class="productprice">$56
-                            <span class="before-price">$80</span>
-                        </p>
-                    </div>
-                    <div class="favoriteIcon">
-                        <span class="material-symbols-outlined">favorite</span>
-                    </div>
-                </div>
-            </div>
-            <div class="product-img-wrapper">
-                <img src="images/product-images_ai/raincoats/multirain.jpg" alt="Blue and red sailor rainjacket for men, with zipper, a hoodie, and pockets.">
-                <div class="textAndIcon">
-                    <div class="productText">
-                        <p class="productname">Westcoast Sailor Jacket Men</p>
-                        <p class="productprice">$130</p>
-                    </div>
-                    <div class="favoriteIcon">
-                        <span class="material-symbols-outlined">favorite</span>
-                    </div>
-                </div>
-            </div>
-            <div class="product-img-wrapper">
-                <img src="images/product-images_ai/raincoats/redrain.jpg" alt="Red rainjacket, discreet black under arms, unisex. It has a hoodie, no pockets.">
-                <div class="textAndIcon">
-                    <div class="productText">
-                        <p class="productname">Milo Lightweight Rainjacket Unisex</p>
-                        <p class="productprice">$85</p>
-                    </div>
-                    <div class="favoriteIcon">
-                        <span class="material-symbols-outlined">favorite</span>
-                    </div>
-                </div>
-            </div>
-            <div class="product-img-wrapper">
-                <img src="images/product-images_ai/raincoats/blackrain.jpg" alt="Black rainjacket, men. With red hoodie and red line down the zipper, no pockets.">
-                <div class="textAndIcon">
-                    <div class="productText">
-                        <p class="productname">William Shell Rainjacket Men</p>
-                        <p class="productprice">$70
-                            <span class="before-price">$100</span>
-                        </p>
-                    </div>
-                    <div class="favoriteIcon">
-                        <span class="material-symbols-outlined">favorite</span>
-                    </div>
-                </div>
-            </div>
-            <div class="product-img-wrapper">
-                <img src="images/product-images_ai/raincoats/burgundyrain.jpg" alt="Burgundy rainjacket with hoodie and a white zipper, women.">
-                <div class="textAndIcon">
-                    <div class="productText">
-                        <p class="productname">Anna Rainjacket Women</p>
-                        <p class="productprice">$60</p>
-                    </div>
-                    <div class="favoriteIcon">
-                        <span class="material-symbols-outlined">favorite</span>
-                    </div>
-                </div>
-            </div>
-            <div class="product-img-wrapper">
-                <img src="images/product-images_ai/raincoats/bluerain.jpg" alt="Blue padded rainparka, women.">
-                <div class="textAndIcon">
-                    <div class="productText">
-                        <p class="productname">Polar Extreme Rain Parka Women</p>
-                        <p class="productprice">$150</p>
-                    </div>
-                    <div class="favoriteIcon">
-                        <span class="material-symbols-outlined">favorite</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        -->
+        <div class="jacket-female-wrapper"></div>
     </main>
     <footer>
         <nav class="footer-navigation">

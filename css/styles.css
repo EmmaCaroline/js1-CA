@@ -519,7 +519,7 @@ footer {
         font-size: 2rem;
     }
 
-    .jacket-wrapper {
+    .jacket-wrapper, .jacket-female-wrapper, .jacket-male-wrapper, .jacket-sale-wrapper {
         margin-top: 2rem;
         flex-direction: row;
         align-items: center;
@@ -527,7 +527,7 @@ footer {
         flex-wrap: wrap;
     }
 
-    .jacket-container {
+    .jacket-container, .jacket-female-container, .jacket-male-container, .jacket-sale-container {
         /*flex-direction: row;
         align-items: center;
         margin-bottom: 3rem;
@@ -536,7 +536,7 @@ footer {
         padding: 0.5rem;
     }
 
-    .jacket-container img {
+    .jacket-container img, .jacket-female-container img, .jacket-male-container img, .jacket-sale-container img {
         height: 20rem;
     }
 
@@ -545,7 +545,7 @@ footer {
         padding: 0.5rem;
     }
 
-    .jacket-wrapper button {
+    .jacket-wrapper button, .jacket-female-wrapper button, .jacket-male-wrapper button, .jacket-sale-wrapper button {
         margin-top: 1rem;
     }
     

@@ -9,9 +9,7 @@
 // 3. Create HTML for the individual items
 // 4. Append the HTML to the document
 
-// Change everything to rainydays instead of gamehub
-
-import { API_JACKETS_URL } from "./constants.mjs";
+import { API_JACKETS_URL } from "./utils/constants.mjs";
 import { doFetch } from "./utils/doFetch.mjs";
 
 /*
@@ -79,9 +77,6 @@ function generateJacketHtml(jacket) {
     } else {
         jacketPriceContainer.appendChild(jacketPrice);
     }
-
-    const jacketLink = document.createElement("a");
-    jacketLink.textContent = "View Details";
 
     jacketSizesContainer.appendChild(sizeDropdown);
     
