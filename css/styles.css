@@ -12,6 +12,10 @@
 @import url("./contact.css");
 @import url("./documents.css");
 
+/* evt add dette: .page-main {
+    flex-grow: 1;
+}*/
+
 /* HEADER STYLING WITH HAMBURGER MENU */
 
 .top-nav {
@@ -506,42 +510,43 @@ footer {
 
     /* INDEX/HOMEPAGE, MAIN CONTENT STYLING, DESKTOP */
 
-    .herobanner {
-        background-image: url("../images/herobanner/banner-desktop.jpg");
-        background-size: contain;
-        background-repeat: no-repeat;
-        width: 100%;
-        height: 0;
-        padding-top: 49.09%; 
-        position: relative;
-    }
-
     .herobanner h1 {
         font-size: 4.5rem;
+        top: 12rem;
     }
 
-    .herobanner h2 {
-        top: 18.75rem;
+    .page-main h2 {
+        font-size: 2rem;
     }
 
-    .herobanner button {
-        top: 26rem;
-    }
-
-    .bestsellers {
+    .jacket-wrapper {
         margin-top: 2rem;
-    }
-
-    .product-img-container {
         flex-direction: row;
         align-items: center;
         margin-bottom: 3rem;
         flex-wrap: wrap;
     }
 
+    .jacket-container {
+        /*flex-direction: row;
+        align-items: center;
+        margin-bottom: 3rem;
+        flex-wrap: wrap;*/
+        flex-basis: calc(33.33% - 1rem);
+        padding: 0.5rem;
+    }
+
+    .jacket-container img {
+        height: 20rem;
+    }
+
     .product-img-wrapper {
         flex-basis: calc(33.33% - 1rem);
         padding: 0.5rem;
+    }
+
+    .jacket-wrapper button {
+        margin-top: 1rem;
     }
     
     .productprice {
