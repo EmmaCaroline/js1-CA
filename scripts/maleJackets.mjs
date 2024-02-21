@@ -22,7 +22,7 @@ function generateJacketHtml(jacketMale) {
     const jacketPrice = document.createElement("div");
     jacketPrice.textContent = "$ " + jacketMale.price;
 
-    const jacketSizesContainer = document.createElement("div");
+    /*const jacketSizesContainer = document.createElement("div");
     jacketSizesContainer.classList.add("jacket-size-container");
     
     const sizeDropdown = document.createElement("select");
@@ -33,15 +33,15 @@ function generateJacketHtml(jacketMale) {
         option.value = size;
         option.textContent = size;
         sizeDropdown.appendChild(option);
-    });
+    });*/
 
-    const addToCartButton = document.createElement("button");
-    addToCartButton.textContent = "Add to Cart";
-    addToCartButton.addEventListener("click", () => {
+    const seeDetailsButton = document.createElement("button");
+    seeDetailsButton.textContent = "See Details";
+    /*addToCartButton.addEventListener("click", () => {
         const selectedSize = sizeDropdown.value;
         // Add logic to add selected size to cart
         console.log("Selected size:", selectedSize);
-    });
+    });*/
 
     if (jacketMale.onSale !== false) {
         const jacketDiscountedPrice = document.createElement("div");
@@ -52,9 +52,9 @@ function generateJacketHtml(jacketMale) {
         jacketPriceContainer.appendChild(jacketPrice);
     }
 
-    jacketSizesContainer.appendChild(sizeDropdown);
+    //jacketSizesContainer.appendChild(sizeDropdown);
     
-    jacketMaleContainer.append(heading, jacketImage, jacketPriceContainer, jacketSizesContainer, addToCartButton);
+    jacketMaleContainer.append(heading, jacketImage, jacketPriceContainer, /*jacketSizesContainer,*/ seeDetailsButton);
     jacketMaleWrapper.appendChild(jacketMaleContainer);
     
     return jacketMaleContainer;

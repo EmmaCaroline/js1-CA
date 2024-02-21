@@ -12,21 +12,6 @@
 import { API_JACKETS_URL } from "./utils/constants.mjs";
 import { doFetch } from "./utils/doFetch.mjs";
 
-/*
-<div class="jacket-wrapper"> 
-    <div class="jacket-container">
-        <!-- classes under will be created in js, just showing to know the divs -->
-        <h3>Rainy Days Thunderbolt Jacket</h3>
-        <img src="">
-        <div class="jacket-price-container">
-            <div>Price: 139.99</div>
-            <div>Discounted Price: 139.99</div>
-        </div>
-        <div class = "jacket-size-container">
-    </div>
-</div>
-*/
-
 
 function generateJacketHtml(jacket) {
     //return jacket HTML
@@ -48,26 +33,11 @@ function generateJacketHtml(jacket) {
     const jacketPrice = document.createElement("div");
     jacketPrice.textContent = "$ " + jacket.price;
 
-    const jacketSizesContainer = document.createElement("div");
-    jacketSizesContainer.classList.add("jacket-size-container");
-    
-    const sizeDropdown = document.createElement("select");
-    sizeDropdown.classList.add("size-dropdown");
+    const seeDetailsButton = document.createElement("button");
+    seeDetailsButton.textContent = "See Details";
+    seeDetailsButton.classList.add("see-details-button");
 
-    jacket.sizes.forEach(size => {
-        const option = document.createElement("option");
-        option.value = size;
-        option.textContent = size;
-        sizeDropdown.appendChild(option);
-    });
-
-    const addToCartButton = document.createElement("button");
-    addToCartButton.textContent = "Add to Cart";
-    addToCartButton.addEventListener("click", () => {
-        const selectedSize = sizeDropdown.value;
-        // Add logic to add selected size to cart
-        console.log("Selected size:", selectedSize);
-    });
+    seeDetailsButton.dataset.productId = jacket.id; // Assuming 'id' is the property containing the product ID
 
     if (jacket.onSale !== false) {
         const jacketDiscountedPrice = document.createElement("div");
@@ -78,9 +48,8 @@ function generateJacketHtml(jacket) {
         jacketPriceContainer.appendChild(jacketPrice);
     }
 
-    jacketSizesContainer.appendChild(sizeDropdown);
     
-    jacketContainer.append(heading, jacketImage, jacketPriceContainer, jacketSizesContainer, addToCartButton);
+    jacketContainer.append(heading, jacketImage, jacketPriceContainer, seeDetailsButton);
     jacketWrapper.appendChild(jacketContainer);
     
     return jacketContainer;
@@ -99,6 +68,15 @@ async function main() {
     const responseData = await doFetch(API_JACKETS_URL);
     const jackets = responseData.data;
     displayJackets(jackets);
+
+    const seeDetailsButtons = document.querySelectorAll('.see-details-button');
+    seeDetailsButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const productId = button.dataset.productId;
+            console.log('Clicked button with product ID:', productId);
+            displaySingleJacket(productId);
+        });
+    });
 }
 
 main();

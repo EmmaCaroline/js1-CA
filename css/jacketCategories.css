@@ -1,13 +1,6 @@
 
 /* THIS PAGE CONTAINS THE STYLING OF MAIN CONTENT ON "rainjackets.html", "softshell.html", and "sale.html" */
 
-/* Reused CSS from other stylesheets:
-.product-img-container     (found in: "home.css")
-.product-img-wrapper       (found in: "home.css")
-.textAndIcon               (found in: "home.css")
-
-*/
-
 .info-part .info-desk {
     display: none;
 }
@@ -23,42 +16,4 @@
 .info-part a {
     text-decoration: none;
     color: var(--color-primary);
-}
-
-.shop-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-left: 3rem;
-    margin-right: 3rem;
-    padding-bottom: 0;
-    margin-bottom: 3rem;
-}
-
-.rainjacket-img {
-    background-image: url("../images/webshop_info_images/rainjackets.jpg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 9.3rem;
-    width: 14rem;
-    border-radius: 0.8rem;
-}
-
-.shop-text, .shop-text2 {
-    text-align: left;
-}
-
-.softjacket-img {
-    background-image: url("../images/webshop_info_images/softshell.jpg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 9rem;
-    width: 14rem;
-    border-radius: 0.8rem;
-}
-
-.discount {
-    color: red;
 }

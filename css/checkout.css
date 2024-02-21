@@ -1,40 +1,6 @@
 
 /* THIS PAGE CONTAINS THE STYLING OF MAIN CONTENT ON "checkout.html" */
 
-/* Reused CSS from other stylesheets:
-.info-part       (found in: "jacketCategories.css")
-.info-desk       (found in: "jacketCategories.css")
-.formContainer   (found in: "contact.css")
-.formHeader      (found in: "contact.css")
-.btn             (found in: "contact.css")
-*/
-
-.basketProduct-container, .summary-ship, .summary-total, .formContainer {
-    margin-left: 3rem;
-    margin-right: 3rem;
-}
-
-.basketProduct-container {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-}
-  
-.basketProduct-container img {
-    width: 10.3rem;
-    height: 10.4rem;
-}
-
-.productname-header {
-    text-transform: uppercase;
-}
-
-.stock {
-    color: #078A70;
-}
-
 .summary-ship, .summary-total {
     margin-top: 2rem;
     margin-bottom: 2rem;

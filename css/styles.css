@@ -12,10 +12,6 @@
 @import url("./contact.css");
 @import url("./documents.css");
 
-/* evt add dette: .page-main {
-    flex-grow: 1;
-}*/
-
 /* HEADER STYLING WITH HAMBURGER MENU */
 
 .top-nav {
@@ -203,6 +199,25 @@ li:last-child a {
     font-size: 0.8rem;
 }
 
+#loading-spinner {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    border: 3px solid var(--bg-color);
+    border-top: 3px solid lightgrey;
+    border-radius: 50%;
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
 /* BUTTON STYLING */
 
 button {
@@ -363,21 +378,9 @@ footer {
         top: 16.563rem;
     }
 
-    .herobanner button {
-        top: 22rem;
-    }
-
-    .product-img-container {
+    .jacket-wrapper, .jacket-female-wrapper, .jacket-male-wrapper, .jacket-sale-wrapper {
         margin-left: 8rem;
         margin-right: 8rem;
-    }
-
-    .learn-more {
-        padding-bottom: 5rem;
-    }
-
-    .learn-more button {
-        bottom: 1rem;
     }
 
     /* JACKET CATEGORIES PAGES STYLING, TABLET */
@@ -386,17 +389,7 @@ footer {
         font-size: 1.4rem;
     }
 
-    .shop-container {
-        margin-left: 8rem;
-        margin-right: 8rem;
-    }
-
     /* CHECKOUT PAGE STYLING, TABLET */
-
-    .basketProduct-container, .formContainer {
-        margin-left: 4rem;
-        margin-right: 4rem;
-    }
 
     .summary-ship, .summary-total {
         font-size: 1rem;
@@ -528,10 +521,6 @@ footer {
     }
 
     .jacket-container, .jacket-female-container, .jacket-male-container, .jacket-sale-container {
-        /*flex-direction: row;
-        align-items: center;
-        margin-bottom: 3rem;
-        flex-wrap: wrap;*/
         flex-basis: calc(33.33% - 1rem);
         padding: 0.5rem;
     }
@@ -540,35 +529,8 @@ footer {
         height: 20rem;
     }
 
-    .product-img-wrapper {
-        flex-basis: calc(33.33% - 1rem);
-        padding: 0.5rem;
-    }
-
     .jacket-wrapper button, .jacket-female-wrapper button, .jacket-male-wrapper button, .jacket-sale-wrapper button {
         margin-top: 1rem;
-    }
-    
-    .productprice {
-        font-size: 1.2rem;
-    }
-
-    .learn-more {
-        background-image: url("../images/nature_backgrounds/forest-desk.jpg");
-        padding-bottom: 8rem;
-        margin-bottom: 5rem;
-    }
-
-    .learn-more button {
-        bottom: 4rem;
-    }
-
-    .learn-more h2 {
-        margin-bottom: 1.8rem;
-    }
-
-    .learn-more p {
-        margin-top: 4rem;
     }
 
     /* JACKET CATEGORIES PAGES STYLING, DESKTOP */
@@ -585,81 +547,13 @@ footer {
         text-align: center;
     }
 
-    .shop-container {
-        flex-direction: row-reverse; 
-        margin: 0;
-        margin-top: 2rem;
-        padding-bottom: 3rem;
-        border-bottom: 0.12rem solid var(--bg-color);
-        padding-right: 10rem;
-        padding-left: 10rem;
-        margin-bottom: 5rem;
-    }
-
-    .shop-text, .shop-text2 {
-        flex: 1; 
-    }
-
-    .shop-text {
-        padding-right: 5rem;
-    }
-
-    .shop-text2 {
-        text-align: center;
-    }
-
     /* PRODUCT PAGE STYLING, DEKSTOP */
 
-    .productImageAndText, .color-price, .productpage, .product-img-container2 {
-        margin-left: 4rem;
-        margin-right: 4rem;
-    }
-
-    .product-info-section {
-        margin-bottom: 3rem; 
-    }
-
-    .productImageAndText {
-        flex-direction: row;
-        align-items: flex-start;
-        margin-top: 5rem;
-    }
-
-    .product-img-container2 {
-        margin-right: 0;
-    }
-
-    .color-price {
-        flex-direction: column;
-        margin-left: 1rem;
-        margin-right: 0;
-    }
-
-    .color-rainjacket, .price-rainjacket {
-        margin: 0;
-    }
-
-    .color-rainjacket {
-        line-height: 2rem;
-    }
-
-    .productpage {
-        margin-left: 0;
+    .single-product-wrapper {
+        /**/
     }
 
     /* CHECKOUT PAGE STYLING, DESKTOP */
-
-    .basketProduct-container {
-        justify-content: center;
-        margin-top: 4rem;
-        margin-bottom: 4rem;
-    }
-
-    .basketProduct-container img {
-        width: 14.3rem;
-        height: 14.4rem;
-        padding-right: 5rem;
-    }
 
     .formContainer {
         margin-left: 4rem;

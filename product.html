@@ -13,11 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
     <script src="https://kit.fontawesome.com/7f993fe397.js" crossorigin="anonymous"></script>
-    <script defer>
-        function toggleDropdown(dropdown) {
-            dropdown.classList.toggle("active");
-        }
-    </script>
+    <script type="module" src="./scripts/singleProduct.mjs"></script>
 </head>
 <body>
     <header>
@@ -46,41 +42,12 @@
             <p>Enrich your outdoor adventures with our high standard jackets</p>
         </div>
     </header>
-    <main>
+    <main class="page-main">
+        <div id="loading-spinner"></div>
         <div class="info-part">
-            <p class="info-desk"><a href="index.html">Home</a> / <a href="rainjackets.html">Rainjackets</a> / Classic Raincoat Women</p>
-            <h1>Classic Raincoat</h1> 
+            <p class="info-desk"><a href="index.html">Home</a> / Product Page</p> 
         </div>
-        <!--
-        <div class="productImageAndText">
-            <div class="product-img-container2">
-                <img src="images/product-images_ai/raincoats/yellowrain.jpg" alt="Yellow Woman's long raincoat with a hoodie, pockets, buttons, and a belt.">
-            </div>
-            <div class="color-price">
-                <span class="color-rainjacket">Mustard Yellow</span>
-                <span class="price-rainjacket">$56.00
-                    <span class="before-price">$80</span>
-                </span>
-            </div>
-            <div class="productpage">
-                <div class="sizesDropdown" onclick="toggleDropdown(this)">
-                    <span>Sizes:</span>
-                    <div class="sizesDropdown-content">
-                        <p>XS</p>
-                        <p>S</p>
-                        <p>M</p>
-                        <p>L</p>
-                        <p>XL</p>
-                    </div>
-                </div>
-                <p>Introducing our timeless Classic Women's Raincoat, the perfect blend of style and functionality for the modern woman. Crafted with care and attention to detail, this raincoat is designed to keep you dry and chic. Its classic silhouette, with a flattering tailored fit, ensures you'll look polished no matter the weather.</p>
-                <p>PVC-free PU material. Waterproof. Zipper and buttons. Belt around waist. Two side pockets</p>
-            </div>
-        </div>
-        <div class="buttons">
-            <button type="buttonAddBasket"><a href="checkout.html">Add to basket</a></button>
-        </div>
-        -->
+        <div class="single-product-wrapper"></div>
     </main>
     <footer>
         <nav class="footer-navigation">
