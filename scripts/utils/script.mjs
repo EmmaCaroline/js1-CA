@@ -2,7 +2,7 @@
 let contentDiv;
 
 function setContentDiv(page) {
-    if (page === 'index.html') {
+    if (page === '/index.html') {
         contentDiv = document.querySelector('.jacket-wrapper');
     } else if (page === '/women/index.html') {
         contentDiv = document.querySelector('.jacket-female-wrapper');

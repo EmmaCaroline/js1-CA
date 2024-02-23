@@ -115,7 +115,7 @@ function addToCart(jacket, selectedSize) {
     }
     localStorage.setItem("cart", JSON.stringify(cart));
     updateCartCount(cart.length);
-    updateCartIcon("checkout/index.html");
+    updateCartIcon("../checkout/index.html");
     showPopup("Product added to cart");
 }
 

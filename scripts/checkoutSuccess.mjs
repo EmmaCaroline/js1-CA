@@ -1,5 +1,4 @@
 
-
 import { clearCart } from './checkout.mjs';
 import { updateCartCount } from './singleProduct.mjs';
 import { updateCartIcon } from './singleProduct.mjs';
