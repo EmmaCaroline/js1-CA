@@ -15,7 +15,7 @@ function generateJacketHtml(jacketMale) {
     const jacketImage = document.createElement("img");
     jacketImage.src = jacketMale.image.url;
     jacketImage.addEventListener('click', function() {
-        window.location.href = `/product/index.html?id=${jacketMale.id}`;
+        window.location.href = `../product/index.html?id=${jacketMale.id}`;
     });
 
     const jacketPriceContainer = document.createElement("div");
@@ -27,7 +27,7 @@ function generateJacketHtml(jacketMale) {
     const seeDetailsButton = document.createElement("button");
     seeDetailsButton.textContent = "See Details";
     seeDetailsButton.addEventListener('click', function() {
-        window.location.href = `/product/index.html?id=${jacketMale.id}`;
+        window.location.href = `../product/index.html?id=${jacketMale.id}`;
     });
 
     if (jacketMale.onSale !== false) {

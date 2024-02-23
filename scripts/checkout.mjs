@@ -77,7 +77,7 @@ function removeFromCart(itemId) {
     const updatedCart = cart.filter(item => item.id !== itemId);
     localStorage.setItem("cart", JSON.stringify(updatedCart));
     updateCartCount(updatedCart.length);
-    updateCartIcon("/checkout/index.html");
+    updateCartIcon("../checkout/index.html");
     displayCartItems(); 
 }
 
@@ -174,7 +174,7 @@ function generateForm() {
     button.setAttribute('type', 'button');
 
     const link = document.createElement('a');
-    link.setAttribute('href', '/checkoutsuccess/index.html');
+    link.setAttribute('href', '../checkoutsuccess/index.html');
     link.textContent = 'Confirm Payment';
 
     button.appendChild(link);
