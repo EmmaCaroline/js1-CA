@@ -195,6 +195,7 @@ export function clearCart() {
 
 function main() {
     window.onload = function() {
+        updateCartIcon("..");
         displayCartItems();
         
         const cart = JSON.parse(localStorage.getItem("cart"));

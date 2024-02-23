@@ -56,8 +56,11 @@ async function displayJackets(jacketsMale) {
 
 async function main() {
     const responseData = await doFetch(API_JACKETS_URL);
-        const jacketsMale = responseData.data.filter(jacketMale => jacketMale.gender === "Male");
-        displayJackets(jacketsMale);
+    const jacketsMale = responseData.data.filter(jacketMale => jacketMale.gender === "Male"); //
+    displayJackets(jacketsMale); //
+    window.onload = function() {
+        updateCartIcon(".."); // Relative to parent directory
+    };
 }
 
 main();
