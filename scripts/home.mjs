@@ -62,9 +62,6 @@ async function main() {
     } catch (error) {
         console.log(error);
     }
-    window.onload = function() {
-        updateCartIcon("."); // Relative to current directory
-    };
 }
 
 main();

@@ -13,7 +13,7 @@ function setContentDiv(page) {
     } else if (page === '/product/index.html') {
         contentDiv = document.querySelector('.single-product-wrapper');
     } else if (page === '/checkout/index.html') {
-        contentDiv = document.querySelector('.cart-items-display');  //all these pages had /
+        contentDiv = document.querySelector('.cart-items-display'); 
     }
 }
 

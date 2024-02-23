@@ -42,9 +42,6 @@ function main() {
     const orderConfirmationDiv = createOrderConfirmation();
     document.body.insertBefore(orderConfirmationDiv, document.querySelector("footer").previousSibling);
     clearCart()
-    window.onload = function() {
-        updateCartIcon(".."); // Relative to parent directory
-    };
 }
 
 main();
