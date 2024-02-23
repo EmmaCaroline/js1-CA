@@ -2,7 +2,7 @@
 import { API_JACKETS_URL } from "./utils/constants.mjs";
 import { doFetch } from "./utils/doFetch.mjs";
 import { updateCartCount } from './singleProduct.mjs';
-/*import { updateCartIcon } from './singleProduct.mjs';*/
+import { updateCartIcon } from './singleProduct.mjs';
 
 function generateJacketHtml(jacket) {
 
@@ -59,6 +59,7 @@ async function main() {
         const responseData = await doFetch(API_JACKETS_URL);
         const jackets = responseData.data;
         displayJackets(jackets);
+        updateCartIcon("/checkout/index.html");
     } catch (error) {
         console.log(error);
     }
