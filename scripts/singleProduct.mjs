@@ -87,9 +87,9 @@ export function updateCartIcon(href) {
     const cartCount = getCartCount();
     const cartIcon = document.getElementById("cartIcon");
     if (cartCount > 0) {
-        cartIcon.innerHTML = `<a href="../checkout/index.html">shopping_basket</a><span class="cart-count">${cartCount}</span>`;
+        cartIcon.innerHTML = `<a href="checkout/index.html">shopping_basket</a><span class="cart-count">${cartCount}</span>`;
     } else {
-        cartIcon.innerHTML = `<a href="../checkout/index.html">shopping_basket</a>`;
+        cartIcon.innerHTML = `<a href="checkout/index.html">shopping_basket</a>`;
     }
 }
 
@@ -115,7 +115,7 @@ function addToCart(jacket, selectedSize) {
     }
     localStorage.setItem("cart", JSON.stringify(cart));
     updateCartCount(cart.length);
-    updateCartIcon("../checkout/index.html");
+    updateCartIcon("checkout/index.html");
     showPopup("Product added to cart");
 }
 
@@ -124,7 +124,7 @@ function removeFromCart(itemId) {
     const updatedCart = cart.filter(item => item.id !== itemId);
     localStorage.setItem("cart", JSON.stringify(updatedCart));
     updateCartCount(updatedCart.length);
-    updateCartIcon("../checkout/index.html");
+    updateCartIcon("checkout/index.html");
 }
 
 async function displayJacketDetails(jacketId) {
@@ -144,7 +144,7 @@ async function main() {
     const urlParams = new URLSearchParams(window.location.search);
     const jacketId = urlParams.get('id');
     window.onload = function() {
-        updateCartIcon("../checkout/index.html"); 
+        updateCartIcon("checkout/index.html"); 
     };
     createCart();
     displayJacketDetails(jacketId);
