@@ -115,7 +115,7 @@ function addToCart(jacket, selectedSize) {
     }
     localStorage.setItem("cart", JSON.stringify(cart));
     updateCartCount(cart.length);
-    updateCartIcon("../checkout/index.html");
+    updateCartIcon("./checkout/index.html");
     showPopup("Product added to cart");
 }
 
@@ -124,7 +124,7 @@ function removeFromCart(itemId) {
     const updatedCart = cart.filter(item => item.id !== itemId);
     localStorage.setItem("cart", JSON.stringify(updatedCart));
     updateCartCount(updatedCart.length);
-    updateCartIcon("../checkout/index.html");
+    updateCartIcon("./checkout/index.html");
 }
 
 async function displayJacketDetails(jacketId) {
