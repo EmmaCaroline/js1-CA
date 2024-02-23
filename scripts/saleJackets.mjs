@@ -48,14 +48,13 @@ async function displayJackets(jacketsSale) {
     const displayContainer = document.querySelector(".jacket-sale-wrapper");
     jacketsSale.forEach((jacketSale) => {
         const jacketHtml = generateJacketHtml(jacketSale);
-        console.log(jacketSale);
         displayContainer.appendChild(jacketHtml);
     });
 }
 
 async function main() {
     const responseData = await doFetch(API_JACKETS_URL);
-    const jacketsSale = responseData.data.filter(jacketSale => jacketSale.onSale === true); //
+    const jacketsSale = responseData.data.filter(jacketSale => jacketSale.onSale === true); 
     displayJackets(jacketsSale); 
 }
 

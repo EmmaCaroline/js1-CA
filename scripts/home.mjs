@@ -49,7 +49,6 @@ async function displayJackets(jackets) {
     displayContainer.textContent = "";
     jackets.forEach(async (jacket) => {
         const jacketHtml = await generateJacketHtml(jacket);
-        console.log(jacket);
         displayContainer.appendChild(jacketHtml);
     });
 }
@@ -59,7 +58,6 @@ async function main() {
         const responseData = await doFetch(API_JACKETS_URL);
         const jackets = responseData.data;
         displayJackets(jackets);
-        //updateCartIcon(".");// updateCartIcon("checkout/index.html");
     } catch (error) {
         console.log(error);
     }

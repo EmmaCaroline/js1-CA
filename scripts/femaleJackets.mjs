@@ -49,14 +49,13 @@ async function displayJackets(jacketsFemale) {
     displayContainer.textContent = "";
     jacketsFemale.forEach((jacketFemale) => {
         const jacketHtml = generateJacketHtml(jacketFemale);
-        console.log(jacketFemale);
         displayContainer.appendChild(jacketHtml);
     });
 }
 
 async function main() {
     const responseData = await doFetch(API_JACKETS_URL);
-    const jacketsFemale = responseData.data.filter(jacketFemale => jacketFemale.gender === "Female"); //
+    const jacketsFemale = responseData.data.filter(jacketFemale => jacketFemale.gender === "Female");
     displayJackets(jacketsFemale); 
 }
 

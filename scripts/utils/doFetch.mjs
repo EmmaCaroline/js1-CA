@@ -17,7 +17,6 @@ export async function doFetch(url, options = {}) {
         console.error("Error:" + error.message);
         alert('An error occurred while fetching data. Please try again later.');
     } finally {
-        // Do cleanups
         loadingSpinner.style.display = 'none';
     }
 }

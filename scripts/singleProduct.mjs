@@ -82,17 +82,7 @@ function getCartCount() {
 export function updateCartCount(count) {
     localStorage.setItem("cartCount", count.toString());
 }
-/*
-export function updateCartIcon(href) {
-    const cartCount = getCartCount();
-    const cartIcon = document.getElementById("cartIcon");
-    if (cartCount > 0) {
-        cartIcon.innerHTML = `<a href="../checkout/index.html">shopping_basket</a><span class="cart-count">${cartCount}</span>`;
-    } else {
-        cartIcon.innerHTML = `<a href="../checkout/index.html">shopping_basket</a>`;
-    }
-}
-*/
+
 export function updateCartIcon() {
     const cartCount = getCartCount();
     const cartIcon = document.getElementById("cartIcon");
@@ -125,7 +115,7 @@ function addToCart(jacket, selectedSize) {
     }
     localStorage.setItem("cart", JSON.stringify(cart));
     updateCartCount(cart.length);
-    updateCartIcon(); // updateCartIcon("../checkout/index.html");
+    updateCartIcon();
     showPopup("Product added to cart");
 }
 
@@ -134,7 +124,7 @@ function removeFromCart(itemId) {
     const updatedCart = cart.filter(item => item.id !== itemId);
     localStorage.setItem("cart", JSON.stringify(updatedCart));
     updateCartCount(updatedCart.length);
-    updateCartIcon(); //updateCartIcon("../checkout/index.html");
+    updateCartIcon();
 }
 
 async function displayJacketDetails(jacketId) {
@@ -156,7 +146,6 @@ async function main() {
     createCart();
     displayJacketDetails(jacketId);
     removeFromCart();
-    //updateCartIcon(".."); //
 }
 
 main();
