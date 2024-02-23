@@ -56,7 +56,7 @@ async function displayJackets(jacketsSale) {
 async function main() {
     const responseData = await doFetch(API_JACKETS_URL);
     const jacketsSale = responseData.data.filter(jacketSale => jacketSale.onSale === true); //
-    displayJackets(jacketsSale); //
+    displayJackets(jacketsSale); 
 }
 
 main();
