@@ -15,7 +15,7 @@ function generateJacketHtml(jacket) {
     const jacketImage = document.createElement("img");
     jacketImage.src = jacket.image.url;
     jacketImage.addEventListener('click', function() {
-        window.location.href = `../product/index.html?id=${jacket.id}`;
+        window.location.href = `/product/index.html?id=${jacket.id}`;
     });
 
     const jacketPriceContainer = document.createElement("div");
@@ -36,7 +36,7 @@ function generateJacketHtml(jacket) {
     const seeDetailsButton = document.createElement("button");
     seeDetailsButton.textContent = "See Details";
     seeDetailsButton.addEventListener('click', function() {
-        window.location.href = `../product/index.html?id=${jacket.id}`;
+        window.location.href = `/product/index.html?id=${jacket.id}`;
     });
      
     jacketContainer.append(heading, jacketImage, jacketPriceContainer, seeDetailsButton);
