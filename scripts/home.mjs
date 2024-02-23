@@ -59,7 +59,7 @@ async function main() {
         const responseData = await doFetch(API_JACKETS_URL);
         const jackets = responseData.data;
         displayJackets(jackets);
-        updateCartIcon("/checkout/index.html");
+        updateCartIcon("checkout/index.html");
     } catch (error) {
         console.log(error);
     }
