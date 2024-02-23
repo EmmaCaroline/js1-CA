@@ -1,22 +1,10 @@
-// Mantra 3.steps: 
-// 1. Make it work
-// 2. Make it right
-// 3. Make it fast
-
-// Display items from api
-// 1. Get the data (check)
-// 2. Loop through the data
-// 3. Create HTML for the individual items
-// 4. Append the HTML to the document
 
 import { API_JACKETS_URL } from "./utils/constants.mjs";
 import { doFetch } from "./utils/doFetch.mjs";
-
+import { updateCartCount } from './singleProduct.mjs';
+import { updateCartIcon } from './singleProduct.mjs';
 
 function generateJacketHtml(jacket) {
-    //return jacket HTML
-    const jacketWrapper = document.createElement("div");
-    jacketWrapper.classList.add("jacket-wrapper");
 
     const jacketContainer = document.createElement("div");
     jacketContainer.classList.add("jacket-container");
@@ -26,18 +14,15 @@ function generateJacketHtml(jacket) {
 
     const jacketImage = document.createElement("img");
     jacketImage.src = jacket.image.url;
+    jacketImage.addEventListener('click', function() {
+        window.location.href = `/product/index.html?id=${jacket.id}`;
+    });
 
     const jacketPriceContainer = document.createElement("div");
     jacketPriceContainer.classList.add("jacket-price-container");
 
     const jacketPrice = document.createElement("div");
     jacketPrice.textContent = "$ " + jacket.price;
-
-    const seeDetailsButton = document.createElement("button");
-    seeDetailsButton.textContent = "See Details";
-    seeDetailsButton.classList.add("see-details-button");
-
-    seeDetailsButton.dataset.productId = jacket.id; // Assuming 'id' is the property containing the product ID
 
     if (jacket.onSale !== false) {
         const jacketDiscountedPrice = document.createElement("div");
@@ -48,35 +33,35 @@ function generateJacketHtml(jacket) {
         jacketPriceContainer.appendChild(jacketPrice);
     }
 
-    
+    const seeDetailsButton = document.createElement("button");
+    seeDetailsButton.textContent = "See Details";
+    seeDetailsButton.addEventListener('click', function() {
+        window.location.href = `/product/index.html?id=${jacket.id}`;
+    });
+     
     jacketContainer.append(heading, jacketImage, jacketPriceContainer, seeDetailsButton);
-    jacketWrapper.appendChild(jacketContainer);
     
     return jacketContainer;
 }
 
 async function displayJackets(jackets) {
     const displayContainer = document.querySelector(".jacket-wrapper");
-    jackets.forEach((jacket) => {
-        const jacketHtml = generateJacketHtml(jacket);
+    displayContainer.textContent = "";
+    jackets.forEach(async (jacket) => {
+        const jacketHtml = await generateJacketHtml(jacket);
         console.log(jacket);
         displayContainer.appendChild(jacketHtml);
     });
 }
 
 async function main() {
-    const responseData = await doFetch(API_JACKETS_URL);
-    const jackets = responseData.data;
-    displayJackets(jackets);
-
-    const seeDetailsButtons = document.querySelectorAll('.see-details-button');
-    seeDetailsButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const productId = button.dataset.productId;
-            console.log('Clicked button with product ID:', productId);
-            displaySingleJacket(productId);
-        });
-    });
+    try {
+        const responseData = await doFetch(API_JACKETS_URL);
+        const jackets = responseData.data;
+        displayJackets(jackets);
+    } catch (error) {
+        console.log(error);
+    }
 }
 
 main();

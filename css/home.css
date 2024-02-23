@@ -25,9 +25,9 @@
 }
 
 .page-main h2 {
-    margin-bottom: 6rem;
-    margin-top: 3rem;
-    font-size: 1.6rem;
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+    font-size: 1.2rem;
 }
 
 .jacket-wrapper, .jacket-female-wrapper, .jacket-male-wrapper, .jacket-sale-wrapper {
@@ -43,7 +43,7 @@
     margin-bottom: 2rem;
 }
 
-.jacket-container, .jacket-female-container, .jacket-male-container, .jacket-sale-container { /* prev: product-img-container */
+.jacket-container, .jacket-female-container, .jacket-male-container, .jacket-sale-container { 
     color: var(--primary-color);
     font-weight: 400;
     text-align: center;
@@ -51,9 +51,14 @@
     margin-bottom: 1rem;
 }
 
+.jacket-container h3, .jacket-female-container h3, .jacket-male-container h3, .jacket-sale-container h3 {
+    font-size: 1rem;
+}
+
 .jacket-container img, .jacket-female-container img, .jacket-male-container img, .jacket-sale-container img { /* prev: product-img-wrapper img */
     max-width: 100%;
     height: auto; 
+    cursor: pointer;
 }
 
 .jacket-price-container, .jacket-female-price-container, .jacket-male-price-container, .jacket-sale-price-container { /* prev: textAndIcon */
@@ -63,7 +68,7 @@
 }
 
 .jacket-wrapper button, .jacket-female-wrapper button, .jacket-male-wrapper button, .jacket-sale-wrapper button {
-    margin-top: 1rem;
-    margin-bottom: 6rem;
+    margin-top: 0.2rem;
+    margin-bottom: 3rem;
 }
 

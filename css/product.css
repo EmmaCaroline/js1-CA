@@ -1,6 +1,29 @@
 
 /* THIS PAGE CONTAINS THE STYLING OF MAIN CONTENT ON "product.html" */
 
-.single-product-wrapper {
-    /**/
+#single-product-wrapper {
+    margin-right: 3rem;
+    margin-left: 3rem;
+}
+
+.jacket-description {
+    font-size: 1rem;
+    font-family: var(--font-roboto);
+    margin-bottom: 1rem;
+}
+
+.jacket-color {
+    font-size: 1rem;
+    font-family: var(--font-roboto);
+}
+
+.jacket-price-container {
+    font-size: 1rem;
+    font-family: var(--font-roboto);
+    margin-bottom: 1rem;
+}
+
+.size-dropdown {
+    font-size: 1rem;
+    margin-bottom: 1rem;
 }
