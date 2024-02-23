@@ -1,8 +1,8 @@
 
 import { API_JACKETS_URL } from "./utils/constants.mjs";
 import { doFetch } from "./utils/doFetch.mjs";
-/*import { updateCartCount } from './singleProduct.mjs';*/
-import { updateCartIcon } from './singleProduct.mjs';
+import { updateCartCount } from './singleProduct.mjs';
+/*import { updateCartIcon } from './singleProduct.mjs';*/
 
 function generateJacketHtml(jacket) {
 
