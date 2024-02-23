@@ -77,7 +77,7 @@ function removeFromCart(itemId) {
     const updatedCart = cart.filter(item => item.id !== itemId);
     localStorage.setItem("cart", JSON.stringify(updatedCart));
     updateCartCount(updatedCart.length);
-    updateCartIcon("checkout/index.html");
+    updateCartIcon("../checkout/index.html");
     displayCartItems(); 
 }
 

@@ -4,15 +4,15 @@ let contentDiv;
 function setContentDiv(page) {
     if (page === 'index.html') {
         contentDiv = document.querySelector('.jacket-wrapper');
-    } else if (page === 'women/index.html') {
+    } else if (page === '/women/index.html') {
         contentDiv = document.querySelector('.jacket-female-wrapper');
-    } else if (page === 'men/index.html') {
+    } else if (page === '/men/index.html') {
         contentDiv = document.querySelector('.jacket-male-wrapper');
-    } else if (page === 'sale/index.html') {
+    } else if (page === '/sale/index.html') {
         contentDiv = document.querySelector('.jacket-sale-wrapper');
-    } else if (page === 'product/index.html') {
+    } else if (page === '/product/index.html') {
         contentDiv = document.querySelector('.single-product-wrapper');
-    } else if (page === 'checkout/index.html') {
+    } else if (page === '/checkout/index.html') {
         contentDiv = document.querySelector('.cart-items-display');  //all these pages had /
     }
 }

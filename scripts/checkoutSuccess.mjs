@@ -28,7 +28,7 @@ function createOrderConfirmation() {
     const button = document.createElement('button');
     button.setAttribute('type', 'button');
     const link = document.createElement('a');
-    link.setAttribute('href', 'index.html');
+    link.setAttribute('href', '../index.html');
     link.textContent = 'Want to shop more?';
     button.appendChild(link);
 
